@@ -1,7 +1,26 @@
 import * as fs from "fs";
+import SyntaxAnalyzer from "./classes/SyntaxAnalyzer";
+import * as acorn from "acorn";
 
-// Read the command line arguments
-// const args = process.argv.slice(1);
-// console.log(args);
+const file_string = fs.readFileSync("./demo_codes/test.jsx", "utf8");
+const analyzer = new SyntaxAnalyzer(file_string);
 
-const file = fs.readFileSync("./demo_codes/test.jsx", "utf8");
+analyzer.createAst({
+  ecmaVersion: "latest",
+  sourceType: "module",
+  locations: true,
+  ranges: true,
+});
+
+const ast = analyzer.getAst();
+
+const walk = (node: acorn.Node) => {
+  if (node.type === "VariableDeclaration") {
+    console.log(node);
+    console.log("------------------");
+  }
+};
+
+analyzer.analyzeAst(walk);
+
+// console.log(ast);
