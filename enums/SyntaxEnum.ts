@@ -1,19 +1,19 @@
 // All the types of syntax that are available in the abstract syntax tree.
-// This is used to determine what type of syntax a node is. This includes jsx syntax.
+// This is used to determine what type of syntax a node is. This includes JSX syntax.
 
-export enum JsSyntaxEnum {
-  JsxElement = "JsxElement",
-  JsxOpeningElement = "JsxOpeningElement",
-  JsxClosingElement = "JsxClosingElement",
-  JsxText = "JsxText",
-  JsxExpressionContainer = "JsxExpressionContainer",
-  JsxAttribute = "JsxAttribute",
-  JsxSpreadAttribute = "JsxSpreadAttribute",
-  JsxIdentifier = "JsxIdentifier",
-  JsxMemberExpression = "JsxMemberExpression",
-  JsxNamespacedName = "JsxNamespacedName",
-  JsxSpreadChild = "JsxSpreadChild",
-  JsxEmptyExpression = "JsxEmptyExpression",
+export enum JsxSyntaxEnum {
+  JSXElement = "JSXElement",
+  JSXOpeningElement = "JSXOpeningElement",
+  JSXClosingElement = "JSXClosingElement",
+  JSXText = "JSXText",
+  JSXExpressionContainer = "JSXExpressionContainer",
+  JSXAttribute = "JSXAttribute",
+  JSXSpreadAttribute = "JSXSpreadAttribute",
+  JSXIdentifier = "JSXIdentifier",
+  JSXMemberExpression = "JSXMemberExpression",
+  JSXNamespacedName = "JSXNamespacedName",
+  JSXSpreadChild = "JSXSpreadChild",
+  JSXEmptyExpression = "JSXEmptyExpression",
   JSXFragment = "JSXFragment",
   JSXOpeningFragment = "JSXOpeningFragment",
   JSXClosingFragment = "JSXClosingFragment",

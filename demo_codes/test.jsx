@@ -16,9 +16,9 @@ const Test = () => {
     }
   };
 
-  return (<div>
+  return (<>
     Test {foo()}
-  </div>);
+  </>);
 };
 
 export default Test;
